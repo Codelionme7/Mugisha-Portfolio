@@ -10,7 +10,7 @@ function NotesPage() {
   return (
     <SiteShell backTo="/" backLabel="Links" width="prose">
       <header className="reveal reveal-1 mb-8">
-        <p className="text-xs font-medium tracking-wide text-accent uppercase">Field notes</p>
+        <p className="text-xs font-medium tracking-wide text-accent uppercase">Notes</p>
         <h1 className="font-display mt-2 text-3xl leading-tight font-medium tracking-tight text-ink">
           Writing
         </h1>

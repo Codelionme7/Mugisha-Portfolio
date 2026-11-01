@@ -1,13 +1,13 @@
 export const profile = {
-  name: "Noa Calder",
-  handle: "noacalder",
-  role: "Instrument builder",
-  location: "Oakland, CA",
-  bio: "I make scientific tools cheap enough to leave in a field. Currently: a $38 soil spectrometer used by California growers.",
-  status: "Applying · Academy founding class ’27",
-  email: "hello@noacalder.studio",
+  name: "Mugisha Lionel",
+  handle: "Codelionme7",
+  role: "Backend & AI Systems Engineer",
+  location: "Nairobi, Kenya",
+  bio: "I turn fragile AI prototypes into production systems. Python, Django, and the pipelines that keep models running without taking the server down.",
+  status: "GCI World 2026 · University of Tokyo",
+  github: "https://github.com/Codelionme7",
   avatar: "/images/avatar.jpg",
-  avatarAlt: "Painted portrait of Noa Calder",
+  avatarAlt: "Portrait of Mugisha Lionel",
 } as const;
 
 export type FeaturedLink = {
@@ -20,35 +20,44 @@ export type FeaturedLink = {
 
 export const featuredLinks: FeaturedLink[] = [
   {
+    title: "AFMAS",
+    subtitle: "Sovereign safety scores for African LLMs",
+    href: "https://github.com/Codelionme7/AFMAS",
+    icon: "code",
+    external: true,
+  },
+  {
+    title: "EchoVault AI",
+    subtitle: "Audio-first capture, storage, and transcription",
+    href: "https://github.com/Codelionme7/EchoVault-Ai",
+    icon: "code",
+    external: true,
+  },
+  {
+    title: "StudySquad",
+    subtitle: "Django matchmaking API for study groups",
+    href: "https://github.com/Codelionme7/StudySquad",
+    icon: "code",
+    external: true,
+  },
+  {
+    title: "ShadowForge",
+    subtitle: "Macro shock tests for personal and SME finances",
+    href: "https://github.com/Codelionme7/ShadowForge",
+    icon: "code",
+    external: true,
+  },
+  {
     title: "Selected work",
-    subtitle: "Instruments, firmware, field trials",
+    subtitle: "SafeZone and the rest of the stack",
     href: "/work",
     icon: "work",
   },
   {
-    title: "Why The Academy",
-    subtitle: "A note on going all in",
-    href: "/notes",
-    icon: "note",
-  },
-  {
-    title: "Open source",
-    subtitle: "Trace firmware · 2.4k stars",
-    href: "/work#trace",
-    icon: "code",
-  },
-  {
     title: "Resume",
-    subtitle: "One page, no fluff",
+    subtitle: "ALX, GCI, and the systems I ship",
     href: "/resume",
     icon: "resume",
-  },
-  {
-    title: "Say hello",
-    subtitle: profile.email,
-    href: `mailto:${profile.email}`,
-    icon: "mail",
-    external: true,
   },
 ];
 
@@ -60,10 +69,7 @@ export type Social = {
 };
 
 export const socials: Social[] = [
-  { id: "github", label: "GitHub", copy: "github.com/noacalder" },
-  { id: "x", label: "X", copy: "x.com/noacalder" },
-  { id: "linkedin", label: "LinkedIn", copy: "linkedin.com/in/noacalder" },
-  { id: "mail", label: "Email", href: `mailto:${profile.email}` },
+  { id: "github", label: "GitHub", href: profile.github },
 ];
 
 export type Project = {
@@ -72,41 +78,55 @@ export type Project = {
   year: string;
   lede: string;
   body: string;
-  image: string;
-  imageAlt: string;
   meta: string;
+  href: string;
 };
 
 export const projects: Project[] = [
   {
-    id: "fieldglass",
-    title: "Fieldglass",
-    year: "2025–26",
-    lede: "A handheld NIR spectrometer that reads soil NPK in eight seconds.",
-    body: "Labs charge hundreds of dollars and a week of waiting. Fieldglass costs $38 in parts, fits in a palm, and writes a result to a phone before the grower has put the scoop down. Twelve hundred units are in California fields this season. I designed the optical path, the enclosure, and the calibration that makes cheap sensors honest.",
-    image: "/images/fieldglass.jpg",
-    imageAlt: "Handheld Fieldglass spectrometer on a wooden workbench",
-    meta: "Hardware · optics · calibration",
-  },
-  {
-    id: "trace",
-    title: "Trace",
-    year: "2024–26",
-    lede: "Open-source firmware for scientific boards that should not need a lab.",
-    body: "Trace is the software under Fieldglass and the field nodes: a tiny runtime, a calibration protocol, and a local-first log that does not phone home. Two thousand four hundred stars, forty-eight contributors, boards from three continents. I wrote the first 8k lines in a garage and still review every release.",
-    image: "/images/trace-bench.jpg",
-    imageAlt: "Open electronics workbench with a custom sensor board",
-    meta: "Firmware · protocol · community",
-  },
-  {
-    id: "nodes",
-    title: "Field nodes",
+    id: "afmas",
+    title: "AFMAS",
     year: "2026",
-    lede: "Twelve-dollar environmental sensors that stay in the soil overnight.",
-    body: "Moisture, temperature, and a coarse nitrogen proxy, staked at crop height, solar trickle, a week of memory. Built so a farm can deploy a grid without asking a vendor for permission. Early trials on two organic plots in the East Bay.",
-    image: "/images/field-node.jpg",
-    imageAlt: "A small sensor node staked in a vegetable field at golden hour",
-    meta: "Sensing · field trials",
+    lede: "An open evaluation engine that scores LLMs for African languages and governance norms.",
+    body: "African Model Assessment System turns model outputs into a Sovereign Safety Score: linguistic fit, governance alignment, and auditability, then a green, yellow, or red call. The Python pipelines ingest, score, and compare runs so the result is the same every time you replay the demo.",
+    meta: "Python · evaluation · data pipelines",
+    href: "https://github.com/Codelionme7/AFMAS",
+  },
+  {
+    id: "echovault",
+    title: "EchoVault AI",
+    year: "2026",
+    lede: "A containerized backend for an audio-first capture, storage, and transcription platform.",
+    body: "Recording has to survive a crash before a transcript is worth anything. EchoVault keeps chunked audio locally, retries uploads, and stores it encrypted. The service side is NestJS with PostgreSQL, Redis, Docker, and GitHub Actions, with transcription and summaries as a layer on top of the capture.",
+    meta: "TypeScript · Docker · PostgreSQL · CI",
+    href: "https://github.com/Codelionme7/EchoVault-Ai",
+  },
+  {
+    id: "studysquad",
+    title: "StudySquad",
+    year: "2025–26",
+    lede: "A matchmaking API that groups students by shared courses and overlapping free time.",
+    body: "Built for the ALX capstone. Django and Django REST Framework handle auth, courses, and schedules. PostgreSQL holds the cohort data, and a matchmaker proposes study groups from overlapping availability instead of a manual spreadsheet.",
+    meta: "Django · DRF · PostgreSQL",
+    href: "https://github.com/Codelionme7/StudySquad",
+  },
+  {
+    id: "shadowforge",
+    title: "ShadowForge",
+    year: "2026",
+    lede: "Stress tests for personal and SME finances against African macroeconomic shocks.",
+    body: "Vectorized Monte Carlo runs and a reverse solver ask how a balance sheet fails under a calibrated shock, then brief the result. Python, MIT licensed, built so the scenario can be replayed instead of narrated.",
+    meta: "Python · simulation · MIT",
+    href: "https://github.com/Codelionme7/ShadowForge",
+  },
+  {
+    id: "safezone",
+    title: "SafeZone",
+    year: "2026",
+    lede: "A community alert preview for finding missing children faster.",
+    body: "The public MVP is a Next.js walkthrough of the flow: register a child, raise an alert, assign a search, submit a sighting, and resolve it. Matching is mocked on the client so the product can be reviewed before a live backend is in the path.",
+    meta: "Next.js · TypeScript · product preview",
+    href: "https://github.com/Codelionme7/safezone",
   },
 ];
 
@@ -119,66 +139,61 @@ export type Note = {
 
 export const notes: Note[] = [
   {
-    slug: "academy",
-    title: "Why The Academy",
-    date: "September 2026",
+    slug: "production",
+    title: "Prototypes are not products",
+    date: "2026",
     body: [
-      "The Academy is not a school I want to attend. It is a room I want to be in.",
-      "I have spent two years making instruments in a garage in Oakland: a spectrometer that reads soil in eight seconds, firmware that runs on a board that costs less than lunch, sensors that growers leave in the field overnight. The work is real. The rooms around it are not.",
-      "I do not need another classroom. I need peers who would rather be building, teachers who are still making the future, and a city where the distance between a sketch and a shop floor is a bike ride.",
-      "Proof of work is the whole application. Mine lives here.",
+      "A notebook that scores a model once is not a system. The system is the queue, the retry, the schema, and the log you can trust when the same job runs tomorrow.",
+      "I care about that layer: Python and Django services, APIs, PostgreSQL, and the async path that lets a model run in production without pinning the server.",
+      "If the demo dies when the laptop sleeps, it was never finished.",
     ],
   },
   {
-    slug: "cheap-instruments",
-    title: "Instruments that cost what they should",
-    date: "June 2026",
+    slug: "afmas",
+    title: "A score you can rerun",
+    date: "2026",
     body: [
-      "A soil panel is a light source, a detector, and a model that has been told the truth enough times. None of those are expensive. The expensive part is the building that wraps them, the brand, the week you wait.",
-      "Fieldglass is an argument that the wrap is optional. If the calibration is public and the board is boring, a grower can own the instrument the way they own a wrench.",
+      "AFMAS exists because a model can look fluent and still be a poor fit for an African language or a local rule. A vibe check does not travel. A pipeline does.",
+      "The Sovereign Safety Score splits linguistic fit, governance, and auditability, then paints the result green, yellow, or red. The point is that someone else can run the same demo and get the same number.",
     ],
   },
   {
-    slug: "garage",
-    title: "Notes from the garage",
-    date: "March 2026",
+    slug: "reliability",
+    title: "What reliable means in practice",
+    date: "2025–26",
     body: [
-      "The mill is louder than the neighbors deserve. I cut the first fifty enclosures at night and sanded them on the roof in the morning. The optical window was the hard part — cheap glass lies, and expensive glass is the whole budget.",
-      "I learned more from the first hundred failed spectra than from any syllabus I was supposed to be in.",
+      "ALX was a year of shipping backend work with a paper trail: containerized services, relational schemas, and REST APIs that stay under version control.",
+      "The habit I kept is boring on purpose. Small changes, a migration you can read, a pipeline that fails in public, and a README that says how to run it.",
     ],
   },
 ];
 
 export const resume = {
-  headline: "Independent instrument builder. Hardware, firmware, and the field trials that make both honest.",
+  headline:
+    "Backend and AI systems engineer. I design Python and Django services, APIs, and the infrastructure that keeps models running in production.",
   sections: [
     {
-      title: "Now",
+      title: "Experience",
       items: [
         {
-          label: "Independent · Oakland",
-          detail: "2024 — present",
-          body: "Designing, fabricating, and shipping low-cost scientific instruments. Fieldglass, Trace, and the field-node grid.",
-        },
-      ],
-    },
-    {
-      title: "Selected work",
-      items: [
-        {
-          label: "Fieldglass",
-          detail: "1,200 units in the field",
-          body: "Handheld NIR soil spectrometer. Optical path, enclosure, and calibration. $38 BOM.",
+          label: "Data Science Trainee · GCI World 2026",
+          detail: "Apr 2026 — present",
+          body: "The University of Tokyo, apprenticeship, remote. Selected for the Global Consumer Intelligence World 2026 program.",
         },
         {
-          label: "Trace",
-          detail: "2.4k GitHub stars",
-          body: "Open-source firmware and calibration protocol for cheap scientific boards.",
+          label: "Backend Software Engineering Trainee · ALX Africa",
+          detail: "Jun 2025 — Mar 2026",
+          body: "Shipped containerized backends, designed PostgreSQL schemas, and built REST APIs with strict version control and documentation.",
         },
         {
-          label: "Workshops",
-          detail: "80 students",
-          body: "Taught high-school builders to fab a first instrument from a schematic and a mill.",
+          label: "Backend Engineer · EchoVault AI",
+          detail: "2026",
+          body: "Containerized backend for an audio-first platform. Database architecture, encrypted storage, and CI/CD through GitHub Actions.",
+        },
+        {
+          label: "Backend Engineer · AFMAS",
+          detail: "2026",
+          body: "Open-source evaluation engine for LLMs. Python pipelines that ingest, score, and compare model outputs on a fixed rubric.",
         },
       ],
     },
@@ -186,9 +201,24 @@ export const resume = {
       title: "Education",
       items: [
         {
-          label: "High school, Oakland",
-          detail: "Completed 2026",
-          body: "Left full-time school when the instruments started shipping. Eligible for The Academy founding class, September 2027.",
+          label: "ALX Kenya · Back-end Development",
+          detail: "Jun 2025 — Mar 2026",
+          body: "Software engineering program focused on backend systems, APIs, and databases.",
+        },
+        {
+          label: "ALX Kenya · Professional Foundations",
+          detail: "Jun 2025 — Sep 2025",
+          body: "Professional foundations for working and communicating in a technical team.",
+        },
+      ],
+    },
+    {
+      title: "Certification",
+      items: [
+        {
+          label: "Quantum Enigmas · IBM",
+          detail: "Issued Jun 2026",
+          body: "IBM Quantum Enigmas.",
         },
       ],
     },

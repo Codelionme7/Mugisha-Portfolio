@@ -51,14 +51,13 @@ function Home() {
 
         <footer className="reveal reveal-7 mt-10 flex flex-col items-center gap-3 text-sm text-faint">
           <p>
-            Applicant to{" "}
             <a
-              href="https://theacademysf.com"
+              href={profile.github}
               className="text-muted underline decoration-line underline-offset-4"
               rel="noreferrer"
               target="_blank"
             >
-              The Academy
+              github.com/Codelionme7
             </a>
           </p>
           <button

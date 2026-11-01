@@ -16,7 +16,7 @@ function ResumePage() {
         </h1>
         <p className="mt-3 text-base leading-normal text-muted">{resume.headline}</p>
         <p className="mt-2 text-sm text-faint">
-          {profile.location} · {profile.email}
+          {profile.location} · github.com/{profile.handle}
         </p>
       </header>
 

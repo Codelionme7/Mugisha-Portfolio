@@ -38,7 +38,7 @@ export function LinkButton({ link }: { link: FeaturedLink }) {
 
   if (link.external) {
     return (
-      <a href={link.href} className={className}>
+      <a href={link.href} className={className} target="_blank" rel="noreferrer">
         {inner}
       </a>
     );

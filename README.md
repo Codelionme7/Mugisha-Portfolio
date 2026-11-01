@@ -1,8 +1,8 @@
-# Mugisha Portfolio
+# Mugisha Lionel
 
-A mobile-first link-in-bio page: circular portrait, short bio, featured links, social icons, and a light/dark theme.
+Personal link-in-bio for Mugisha Lionel, a backend and AI systems engineer in Nairobi.
 
-The live page is framed as an applicant landing site. Swap the name, portrait, bio, and links in `src/lib/profile.ts` and the images in `public/images/`.
+Portrait, short bio, featured GitHub projects, resume, and a light/dark theme. Content lives in `src/lib/profile.ts`. The portrait is `public/images/avatar.jpg`.
 
 ## Run locally
 
@@ -13,4 +13,4 @@ npm run dev
 
 ## Deploy
 
-`npm run build` produces a Vercel-ready app. Connect this repo to Vercel and deploy the default branch.
+`npm run build` produces a Vercel-ready app. Connect this repo to Vercel and deploy `main`.

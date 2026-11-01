@@ -4,7 +4,7 @@ import { PreviewHostBridge } from "@/components/preview-host-bridge";
 import { ThemeProvider } from "@/lib/theme";
 import appCss from "../styles.css?url";
 
-const APP_NAME = "Noa Calder";
+const APP_NAME = "Mugisha Lionel";
 const THEME_BOOTSTRAP = `(function(){try{var t=localStorage.getItem("theme");var d=t==="dark"||(t!=="light"&&window.matchMedia("(prefers-color-scheme: dark)").matches);if(d)document.documentElement.classList.add("dark");}catch(e){}})();`;
 
 export const Route = createRootRoute({
@@ -16,7 +16,7 @@ export const Route = createRootRoute({
       {
         name: "description",
         content:
-          "Instrument builder in Oakland. Personal landing page and selected work — applicant to The Horowitz Andreessen Academy, founding class 2027.",
+          "Mugisha Lionel, backend and AI systems engineer in Nairobi. Python, Django, Docker, and the work on GitHub.",
       },
       { name: "theme-color", content: "#F3EFE6" },
     ],
