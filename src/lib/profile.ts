@@ -6,6 +6,7 @@ export const profile = {
   bio: "I turn fragile AI prototypes into production systems. Python, Django, and the pipelines that keep models running without taking the server down.",
   status: "GCI World 2026 · University of Tokyo",
   github: "https://github.com/Codelionme7",
+  linkedin: "https://www.linkedin.com/in/mugishalionel",
   avatar: "/images/avatar.jpg",
   avatarAlt: "Portrait of Mugisha Lionel",
 } as const;
@@ -70,6 +71,7 @@ export type Social = {
 
 export const socials: Social[] = [
   { id: "github", label: "GitHub", href: profile.github },
+  { id: "linkedin", label: "LinkedIn", href: profile.linkedin },
 ];
 
 export type Project = {

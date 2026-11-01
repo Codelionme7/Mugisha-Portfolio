@@ -16,7 +16,14 @@ function ResumePage() {
         </h1>
         <p className="mt-3 text-base leading-normal text-muted">{resume.headline}</p>
         <p className="mt-2 text-sm text-faint">
-          {profile.location} · github.com/{profile.handle}
+          {profile.location} ·{" "}
+          <a href={profile.github} className="underline decoration-line underline-offset-4" target="_blank" rel="noreferrer">
+            github.com/{profile.handle}
+          </a>
+          {" · "}
+          <a href={profile.linkedin} className="underline decoration-line underline-offset-4" target="_blank" rel="noreferrer">
+            LinkedIn
+          </a>
         </p>
       </header>
 
