@@ -27,6 +27,8 @@ export function SocialRow() {
             <a
               href={social.href}
               aria-label={social.label}
+              target="_blank"
+              rel="noreferrer"
               className="icon-btn grid size-11 place-items-center rounded-full bg-surface text-ink"
             >
               <SocialIcon id={social.id} />
