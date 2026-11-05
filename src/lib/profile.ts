@@ -6,7 +6,7 @@ export const profile = {
   bio: "I turn fragile AI prototypes into production systems. Python, Django, and the pipelines that keep models running without taking the server down.",
   status: "GCI World 2026 · University of Tokyo",
   github: "https://github.com/Codelionme7",
-  linkedin: "https://www.linkedin.com/in/mugishalionel",
+  linkedin: "https://ke.linkedin.com/in/mugisha-lionel",
   avatar: "/images/avatar.jpg",
   avatarAlt: "Portrait of Mugisha Lionel",
 } as const;
