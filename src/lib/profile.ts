@@ -82,6 +82,7 @@ export type Project = {
   body: string;
   meta: string;
   href: string;
+  linkLabel?: string;
 };
 
 export const projects: Project[] = [
@@ -126,9 +127,10 @@ export const projects: Project[] = [
     title: "SafeZone",
     year: "2026",
     lede: "A community alert preview for finding missing children faster.",
-    body: "The public MVP is a Next.js walkthrough of the flow: register a child, raise an alert, assign a search, submit a sighting, and resolve it. Matching is mocked on the client so the product can be reviewed before a live backend is in the path.",
-    meta: "Next.js · TypeScript · product preview",
-    href: "https://github.com/Codelionme7/safezone",
+    body: "The public MVP walks through the flow: register a child, raise an alert, assign a search, submit a sighting, and resolve it. The live preview is deployed so the product can be tried before a production backend is in the path.",
+    meta: "Next.js · TypeScript · live preview",
+    href: "https://safezone-amber-one.vercel.app/",
+    linkLabel: "Open the app",
   },
 ];
 

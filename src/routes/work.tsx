@@ -41,7 +41,7 @@ function WorkPage() {
               rel="noreferrer"
               className="mt-3 inline-flex min-h-11 items-center text-sm font-medium text-accent underline decoration-line underline-offset-4"
             >
-              View repository
+              {project.linkLabel ?? "View repository"}
             </a>
           </article>
         ))}
